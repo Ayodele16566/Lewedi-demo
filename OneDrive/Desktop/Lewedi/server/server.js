@@ -92,4 +92,5 @@ app.post('/api/auth/signin', (req, res) => {
   res.json({ token: jwt.sign({ id: user.id, email: user.email }, secret, { expiresIn: '7d' }), user: safeUser });
 });
 
-app.listen(3001, () => console.log('Lewedi API listening on http://localhost:3001'))
+const port = process.env.PORT || 3001;
+app.listen(port, () => console.log(`Lewedi API listening on port ${port}`));
