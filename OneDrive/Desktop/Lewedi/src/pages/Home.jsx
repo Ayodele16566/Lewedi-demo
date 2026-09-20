@@ -1,0 +1,16 @@
+import { ArrowRight, HeartHandshake, ShieldCheck, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import Reveal from '../components/Reveal';
+import StoryCard from '../components/StoryCard';
+import { stories } from '../data/stories';
+
+export default function Home() {
+  return <>
+    <section className="hero page-section"><div className="hero-copy"><p className="eyebrow">Lewedi Development Initiative</p><h1>Women deserve to live <span>without fear.</span></h1><p className="hero-intro">We are building a future where women and girls are safe, heard and free to shape their own lives.</p><div className="hero-actions"><Link className="button" to="/about">What we do <ArrowRight size={17} /></Link><Link className="quiet-link" to="/stories">Read our stories <span>↗</span></Link></div><div className="hero-note"><span className="mini-mark">✦</span><span>Working across communities<br />to make change last.</span></div></div><div className="hero-art"><div className="hero-ring"></div><img src="/logo.png" alt="Lewedi women empowerment emblem" /><div className="floating-note">Dignity<br /><em>is a right.</em></div></div></section>
+    <section className="trust-strip"><span>Our work is rooted in</span><strong>Respect</strong><i></i><strong>Safety</strong><i></i><strong>Opportunity</strong><i></i><strong>Collective action</strong></section>
+    <section className="page-section split-section"><Reveal><p className="eyebrow">Why Lewedi exists</p><h2>Change starts when women are <em>believed.</em></h2></Reveal><Reveal className="split-copy"><p>Violence against women is not inevitable. With the right support, trusted systems and communities willing to listen, women can reclaim their choices and lead change for everyone.</p><Link className="text-link" to="/about">Meet Lewedi <ArrowRight size={16} /></Link></Reveal></section>
+    <section className="impact-section"><div className="page-section"><Reveal><p className="eyebrow light">The work, in practice</p><h2>Small shifts.<br /><em>Deep roots.</em></h2></Reveal><div className="impact-grid"><Reveal><div className="impact-item"><ShieldCheck /><strong>Safer spaces</strong><p>We help communities prevent violence and support survivors with care.</p></div></Reveal><Reveal><div className="impact-item"><HeartHandshake /><strong>Stronger voices</strong><p>We equip women and girls with the knowledge to speak and be heard.</p></div></Reveal><Reveal><div className="impact-item"><Sparkles /><strong>Real opportunity</strong><p>We connect women to skills, resources and networks that open doors.</p></div></Reveal></div></div></section>
+    <section className="page-section stories-preview"><Reveal className="section-heading"><div><p className="eyebrow">From the community</p><h2>Stories of <em>becoming.</em></h2></div><Link className="quiet-link" to="/stories">See all stories <span>↗</span></Link></Reveal><div className="story-grid">{stories.map((story) => <Reveal key={story.title}><StoryCard story={story} /></Reveal>)}</div></section>
+    <section className="join-banner"><div><p className="eyebrow light">There is room for you here</p><h2>Stand with women.<br /><em>Move the world.</em></h2></div><Link className="button button-light" to="/signup">Join our circle <ArrowRight size={17} /></Link></section>
+  </>;
+}

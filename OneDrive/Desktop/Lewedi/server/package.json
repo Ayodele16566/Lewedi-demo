@@ -1,0 +1,16 @@
+{
+  "name": "lewedi-api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "latest",
+    "better-sqlite3": "latest",
+    "cors": "latest",
+    "express": "latest",
+    "helmet": "latest",
+    "jsonwebtoken": "latest"
+  }
+}

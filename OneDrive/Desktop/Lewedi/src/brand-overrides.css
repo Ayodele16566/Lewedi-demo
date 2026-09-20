@@ -1,0 +1,31 @@
+:root {
+  --ink: #062d1b;
+  --green: #075b31;
+  --forest: #003c23;
+  --cream: #faf8f1;
+  --paper: #fffef9;
+  --coral: #075b31;
+  --gold: #c5d7bd;
+  --line: #d5dfd3;
+  --muted: #607064;
+}
+
+.button:hover { background: #003c23; }
+.button-outline { background: transparent; color: var(--green); border: 1px solid var(--green); }
+.button-outline:hover { color: var(--cream); background: var(--green); }
+.story-coral { background: #d7e5d1; }
+.story-gold { background: #e8eedf; }
+.floating-note { background: #c5d7bd; box-shadow: 5px 5px 0 #a9c1aa; }
+.hero-ring:after { background: var(--green); }
+.join-banner { background: var(--green); }
+.footer-identity em { color: #b9d4b4; }
+.footer-label { color: #b9d4b4; }
+.footer-bottom a { color: #b9d4b4; }
+.story-callout { background: var(--forest); }
+.auth-art { background: var(--green); }
+.auth-art em { color: #b9d4b4; }
+.form-success { color: var(--green); }
+.form-error { color: var(--green); }
+@media (max-width: 760px) {
+  .nav-links .button-outline { border: 0; padding-left: 0; }
+}
